@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>@Context.ViewBag.PageTitle</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    @If.Context.ViewBag.IsProduction
+    <link href="../Content/CSS/app.core.min.css?ver=5" rel="stylesheet" />
+    <link href="../Content/CSS/app.theme.min.css" rel="stylesheet" />
+    @EndIf
+    @IfNot.Context.ViewBag.IsProduction
+    <link href="../Content/CSS/app.core.css?ver=1" rel="stylesheet" />
+    <link href="../Content/CSS/app.theme.css" rel="stylesheet" />
+    @EndIf
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="content">
+
+    </div>
+    @If.Context.ViewBag.IsProduction
+    <script type="text/javascript" src="/Content/JS/app.core.min.js"></script>
+    <script type="text/javascript" src="/Content/JS/app.js?ver=1"></script>
+    @EndIf
+    @IfNot.Context.ViewBag.IsProduction
+    <script type="text/javascript" src="/Content/JS/app.core.js"></script>
+    <script type="text/javascript" src="http://localhost:8080/Content/js/app.js"></script>
+    @EndIf
+    <script type="text/javascript">
+        $(document).ready(function() {
+            ReactNancyAspnetDemo.Setup();
+        });
+    </script>
+
+</body>
+</html>
