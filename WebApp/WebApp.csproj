@@ -78,11 +78,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App\PageTitle.jsx" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="Content\JS\app.core.min.js.map" />
     <Content Include="App\main.jsx" />
-    <Content Include="App\root.jsx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
